@@ -19,6 +19,10 @@ app.get('/api/image', (req, res) => {
 });
 app.use(express.static("uploads"))
 
+app.get('/', (req, res) => {
+    res.send("estoy funcionando")
+});
+
 // // *******************Configurar CORS   Comentar esta zona para usar postman*******************
 
 const whitelist = [process.env.FRONTEND_URL]
